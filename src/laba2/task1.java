@@ -2,7 +2,7 @@ package laba2;
 
 import java.util.Scanner;
 
-public class eclfirst {
+public class task1 {
 
 	public static void main(String[] args) {
 		
@@ -10,7 +10,7 @@ public class eclfirst {
 		
 		System.out.printf("Введите число для проверки деления");
 		int numbr = in.nextInt();
-		
+
 		if (numbr %3 == 0)
 		{
 			
