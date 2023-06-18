@@ -1,18 +1,25 @@
 package lr7.n1;
 
-public class Main {
-    public static void main(String[] args) {
-        SuperClassTest sc = new SuperClassTest("передал в конструктор суперкласса");
-        String className = sc.toString();
-        System.out.println(className);
+public class SuperClassTest {
+    private String str1;
 
-        SubClassTest subc1 =  new SubClassTest("передал в конструктор подкласса");
-        String subClassName1 = subc1.toString();
-        System.out.println(subClassName1);
+    SuperClassTest(String strEx){
+        this.str1 = strEx;
+    }
 
-        SubClassTest subc2 = new SubClassTest("передал в конструктор подкласса", "где два параметра");
-        String subClassName2 = subc2.toString();
-        System.out.println(subClassName2);
+    SuperClassTest(){}
+
+    @Override
+    public String toString(){
+        return this.getClass().getSimpleName() + ": str1 = " + this.str1;
+    }
+
+    public String getStr1() {
+        return str1;
+    }
+
+    public void setStr1(String str1) {
+        this.str1 = str1;
     }
 }
 
